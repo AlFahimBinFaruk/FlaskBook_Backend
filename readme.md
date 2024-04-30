@@ -31,7 +31,7 @@ As a Registered user, I can
 * Database : MongoDB
 
 ### Database Models
-![Database Model image](https://drive.google.com/file/d/1stsVefj52sP0D_KEtQvQCs-IKpbrymfR/view?usp=sharing)
+![Database Model image](https://drive.google.com/uc?export=view&id=1stsVefj52sP0D_KEtQvQCs-IKpbrymfR)
 
 ### API Routes
 
