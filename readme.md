@@ -1,5 +1,8 @@
 ## FlaskBook Backend API
 
+* Live Link : todo
+* Frontend repo : todo
+
 ### Client Requirements
 As a Guest user, I can
 * View Homepage, Blogs, User Profile
