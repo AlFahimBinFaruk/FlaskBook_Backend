@@ -32,7 +32,11 @@ As a Registered user, I can
 * Database : MongoDB
 
 ### Database Models
-![Database Model image](https://drive.google.com/uc?export=view&id=1ikUVj152jdSd1AxvH7O4aLw2JRdpG7TH)
+![Database Model image](https://drive.google.com/uc?export=view&id=1sRqNj3UHpOGM1HlIFY_UlnKoiq0wak4H)
+
+### Screen shots
+![Image](https://drive.google.com/uc?export=view&id=1xbwXOZi2K5WhGzdgbSnNGiUed2caHWOI)
+
 
 ### API Routes
 * To register - POST
