@@ -36,6 +36,12 @@ As a Registered user, I can
 
 ### Screen shots
 ![Image](https://drive.google.com/uc?export=view&id=1xbwXOZi2K5WhGzdgbSnNGiUed2caHWOI)
+![Image](https://drive.google.com/uc?export=view&id=1EhulLHXOdgtHUbC-4AvZ1tfdh5F0tMrb)
+![Image](https://drive.google.com/uc?export=view&id=1mKVB6skYHfKET23gTd3v2xVduap6HjX8)
+![Image](https://drive.google.com/uc?export=view&id=1D4YxzzLFbka1c4U2v2d__qKFxRGRR2ma)
+![Image](https://drive.google.com/uc?export=view&id=1oQOjt8zpazbC0Hqe92N0ZRbpaUEPPQ8n)
+![Image](https://drive.google.com/uc?export=view&id=1nOjRK0ctSwAO73cvnQpyudFlEa1WK10-)
+![Image](https://drive.google.com/uc?export=view&id=1COF1NIc2ppfJbO4erMY4gqzZp8I7xm5Y)
 
 
 ### API Routes
