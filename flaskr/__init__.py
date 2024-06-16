@@ -35,7 +35,7 @@ def create_app(test_config=None):
     @app.get('/')
     def hello():
         from .db_models.User import User
-        nw = User("fahim", "doe2", "do2e@gmail.com", "33333")
+        nw = User("test1", "test", "test@gmail.com", "33333")
         nw.save()
         return 'Hello, World!'
 
