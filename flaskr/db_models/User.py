@@ -3,6 +3,7 @@ from datetime import datetime
 
 from .. import mongo
 
+
 class User:
 
     # id will be added by default.
@@ -14,7 +15,6 @@ class User:
         self.password = password
 
     def save(self):
-
         mongo.db.users.insert_one({
             "first_name": self.first_name,
             "last_name": self.last_name,
