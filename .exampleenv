@@ -1,2 +1,3 @@
-export SECRET_KEY=
-export MONGO_URI=
+export SECRET_KEY=dev
+export MONGO_URI="mongodb+srv://username:password@cluster1.fa2ety3.mongodb.net/db_name?retryWrites=true&w=majority"
+JWT_SECRET_KEY="dldoeddde322ws"
