@@ -4,27 +4,29 @@
 * [Frontend repo](https://github.com/AlFahimBinFaruk/FlaskBook_Client)
 
 ### Client Requirements
-As a Guest user, I can
-* View Homepage, Blogs, User Profile
-* Signup, Login
+### As a Guest user, I can
+- [ ] View Homepage, Blogs(pagination), User Profile
+- [X] Signup
+- [X] Login
 
-As an Admin user, I can
-* Login
-* Register - new admin can only be registered from backend.
-* View & edit my profile
-* Upload, Update, Delete , Read My contents.
-* CRUD Users
-* CRUD Roles(Only 2 roles Admin,User)
-* CRUD user contents
-* Logout
+### As an Admin user, I can
+- [X] Login
+- [X] Register - new admin can only be registered from backend.
+- [X] View & edit my profile
+- [ ] Upload, Update, Delete, Read My contents.
+- [X] CRUD Users
+- [ ] CRUD Roles (Only 2 roles Admin, User)
+- [ ] CRUD user contents
+- [ ] Logout
 
-As a Registered user, I can
-* Login
-* View & Edit or Delete My profile info
-* Upload, Update, Delete , Read My contents.
-* Read others contents.
-* Comments, Delete my comments and Upvote on every post's (including mine).
-* Logout
+### As a Registered user, I can
+- [X] Login
+- [X] View & Edit or Delete My profile info
+- [ ] Upload, Update, Delete, Read My contents.
+- [ ] Read others contents.
+- [ ] Comment, Delete my comments, and Upvote on every post's (including mine).
+- [ ] Logout
+
 
 ### Technology
 * Language : Python - version 3
