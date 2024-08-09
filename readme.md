@@ -34,7 +34,7 @@
 * Database : MongoDB
 
 ### Database Models
-![Database Model image](https://drive.google.com/uc?export=view&id=1sRqNj3UHpOGM1HlIFY_UlnKoiq0wak4H)
+![Database Model image](https://drive.google.com/uc?export=view&id=1a-x1ENoL4_vnuvIGicXNYRRKQsznl45w)
 
 ### Screen shots
 ![Image](https://drive.google.com/uc?export=view&id=1xbwXOZi2K5WhGzdgbSnNGiUed2caHWOI)
