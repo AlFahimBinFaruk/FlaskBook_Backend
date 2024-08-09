@@ -5,7 +5,7 @@
 
 ### Client Requirements
 ### As a Guest user, I can
-- [ ] View Homepage, Blogs(pagination), User Profile
+- [X] View Homepage, Blogs(pagination), User Profile
 - [X] Signup
 - [X] Login
 
@@ -13,19 +13,19 @@
 - [X] Login
 - [X] Register - new admin can only be registered from backend.
 - [X] View & edit my profile
-- [ ] Upload, Update, Delete, Read My contents.
+- [X] Upload, Update, Delete, Read My contents.
 - [X] CRUD Users
-- [ ] CRUD Roles (Only 2 roles Admin, User)
-- [ ] CRUD user contents
-- [ ] Logout
+- [X] CRUD Roles (Only 2 roles Admin, User)
+- [X] CRUD user contents
+- [X] Logout
 
 ### As a Registered user, I can
 - [X] Login
 - [X] View & Edit or Delete My profile info
-- [ ] Upload, Update, Delete, Read My contents.
-- [ ] Read others contents.
-- [ ] Comment, Delete my comments, and Upvote on every post's (including mine).
-- [ ] Logout
+- [X] Upload, Update, Delete, Read My contents.
+- [X] Read others contents.
+- [X] Comment, Delete my comments, and Upvote on every post's (including mine).
+- [X] Logout
 
 
 ### Technology
