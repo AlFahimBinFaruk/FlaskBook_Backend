@@ -14,7 +14,7 @@ def handle_get_user_details_by_id(user_id):
 
         admin = User.find_by_id(ObjectId(admin_id))
 
-        if not admin or admin.role != "admin":
+        if not admin or admin.get("role") != "admin":
             return jsonify({"error": "Authentication failed"}), 400
 
         user = User.find_by_id(ObjectId(user_id))
@@ -22,6 +22,7 @@ def handle_get_user_details_by_id(user_id):
         if not user:
             return jsonify({"error": "No such user exists"}), 400
         else:
+            user['_id'] = str(user['_id'])
             return jsonify(user), 200
 
     except PyMongoError as e:

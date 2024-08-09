@@ -15,7 +15,7 @@ def handle_update_profile_by_id(user_id):
 
         admin = User.find_by_id(ObjectId(admin_id))
 
-        if not admin or admin.role != "admin":
+        if not admin or admin.get("role") != "admin":
             return jsonify({"error": "Authentication failed"}), 400
 
         user = User.find_by_id(ObjectId(user_id))

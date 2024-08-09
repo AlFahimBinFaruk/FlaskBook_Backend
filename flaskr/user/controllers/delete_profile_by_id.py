@@ -13,7 +13,7 @@ def handle_delete_profile_by_id(user_id):
 
         admin = User.find_by_id(ObjectId(admin_id))
 
-        if not admin or admin.role != "admin":
+        if not admin or admin.get("role") != "admin":
             return jsonify({"error": "Authentication failed"}), 400
 
         user = User.find_by_id(ObjectId(user_id))
@@ -22,7 +22,7 @@ def handle_delete_profile_by_id(user_id):
             return jsonify({"error": "No such user exists"}), 400
 
         # Delete user using User model
-        result = User.delete(id)  # Use the id parameter
+        result = User.delete(user_id)  # Use the id parameter
 
         if result:
             return jsonify({"message": "User deleted successfully"}), 200

@@ -11,17 +11,26 @@ def handle_get_user_list():
     try:
         admin_id = get_jwt_identity()
 
+        # Retrieve the admin user from the database
         admin = User.find_by_id(ObjectId(admin_id))
 
-        if not admin or admin.role != "admin":
+        # Check if the user is an admin
+        if not admin or admin.get('role') != "admin":
             return jsonify({"error": "Authentication failed"}), 400
 
+        # Retrieve and paginate the user list
         page = int(request.args.get('page', 1))
         per_page = int(request.args.get('per_page', 10))
-        users = User.find_all(page=page, per_page=per_page)
-        return jsonify(users), 200
+        users, total_users = User.find_all(page=page, per_page=per_page)
+
+        return jsonify({
+            "page": page,
+            "per_page": per_page,
+            "total": total_users,
+            "users": users
+        }), 200
 
     except PyMongoError as e:
-        return jsonify({"error": f" {e}"}), 500
+        return jsonify({"error": f"Database error: {str(e)}"}), 500
     except Exception as e:
-        return jsonify({"error": f" {e}"}), 500
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500

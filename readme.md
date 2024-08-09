@@ -50,10 +50,24 @@
 * To register - POST
 ```text
 /api/user/register
+
+-body
+{
+    "first_name":"john",
+    "last_name":"doe",
+    "email":"john@gmail.com",
+    "password":"123456"
+}
 ```
 * To login : will get and jwt token. - POST
 ```text
 /api/user/login
+
+-body
+{
+    "email":"john@gmail.com",
+    "password":"123456"
+}
 ```
 * To Logout - will logout user/admin - GET
 ```text
@@ -61,23 +75,42 @@
 ```
 * Get all user list : secured, authorized to admin only - GET
 ```text
-/api/user/all
+/api/user/all?page=1,per_page=10
 ```
 * Get individual user details : secured, only authorized admin and user himself and access it - GET
 ```text
-/api/user/{id}
+/api/user/details{user_id}
 ```
 * Update user information : secured, only authorized admin and user himself and access it - PUT
 ```text
-/api/user/update/{id}
+/api/user/update/{user_id}
+
+-body
+{
+    "email":"fahim@gmail.com"
+}
 ```
-* Update user role : only authorized admin can do it - PUT
+* Get my details - GET
 ```text
-/api/user/update/role/{id}
+/api/user/details/my-profile
 ```
+* Update my profile - PUT
+```text
+/api/user/update/my-profile
+
+-body
+{
+    "first_name":"fahim"
+}
+```
+* Change my password
+```text
+/api/user/update/change-password
+```
+
 * Delete a user : secured, only authorized admin and user himself and access it - DELETE
 ```text
-/api/user/delete/{id}
+/api/user/delete/{user_id}
 ```
 * Get all blog List - all visitors can access it, it will have pagination - GET
 ```text
@@ -85,43 +118,70 @@
 ```
 * Get Individual user all blog List - all visitors can access it, it will have pagination - GET
 ```text
-/api/user/{id}/blog/all
+/api/blog/my/all
 ```
 * Get individual blog details : all visitors can access it - GET
 ```text
-/api/blog/{id}
+/api/blog/details/{blog_id}
 ```
 * Add new blog : only authorized users and admin can do it - POST
 ```text
 /api/blog/add-new
+
+-body
+{
+    "title":"test 1",
+    "description":"test 1 desc"
+}
 ```
 * Update blog : only user who uploaded it or authorized admin can do it - PUT
 ```text
 /api/blog/update/{id}
+
+-body
+{
+    "title":"test 1 updated",
+    "description":"test 1 desc"
+}
 ```
 * Delete blog : only user who uploaded it or authorized admin can do it - DELETE
 ```text
-/api/blog/delete/{id}
+/api/blog/delete/{blog_id}
 ```
 * Upvote : only registered user/admin can do it - POST
 ```text
-/api/blog/upvote/{post_id}
+/api/vote/upvote/{blog_id}
 ```
 * Down vote : only registered user/admin can do it - POST
 ```text
-/api/blog/downvote/{post_id}
+/api/vote/downvote/{blog_id}
+```
+* Get comment list : GET
+```text
+/api/comment/all/{blog_id}
 ```
 * Add new Comment : only registered user/admin can do it - POST
 ```text
-/api/blog/comment/{post_id}
+/api/comment/add-new
+
+-body
+{
+    "blog_id":"66b61b9e87b2c5efc3979d65",
+    "body":"test comment"
+}
 ```
 * Update comment : only registered user and admin can do it - PUT
 ```text
-/api/blog/comments/update/{post_id}/{comment_id}
+/api/comment/update/{comment_id}
+
+-body
+{
+    "body":"test comment updated"
+}
 ```
 * Delete comment : only registered user and admin can do it - DELETE
 ```text
-/api/blog/comments/delete/{post_id}/{comment_id}
+/api/comment/delete/{comment_id}
 ```
 
 ### How to Build and Run

@@ -6,7 +6,7 @@ from flask import current_app
 
 
 class User:
-    def __init__(self, first_name: str, last_name: str, email: str, password: str, role:str):
+    def __init__(self, first_name: str, last_name: str, email: str, password: str, role: str):
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
@@ -43,9 +43,15 @@ class User:
     @staticmethod
     def find_all(page=1, per_page=10):
         users_collection = mongo.db.users
-        skip_count = (page - 1) * per_page
-        users = users_collection.find().skip(skip_count).limit(per_page)
-        return list(users)
+        users_cursor = users_collection.find().skip((page - 1) * per_page).limit(per_page)
+        total_users = users_collection.count_documents({})
+
+        users = []
+        for user in users_cursor:
+            user['_id'] = str(user['_id'])  # Convert ObjectId to string
+            users.append(user)
+
+        return users, total_users
 
     @staticmethod
     def update(user_id, update_data):
