@@ -16,6 +16,7 @@ def handle_get_user_details():
             return jsonify({"error": "No such user exists"}), 400
         else:
             return jsonify({
+                "user_id":user_id,
                 "first_name": user.get("first_name"),
                 "last_name": user.get("last_name"),
                 "email": user.get("email")

@@ -5,6 +5,7 @@ from flask import Flask
 from flask_pymongo import PyMongo
 from flask_jwt_extended import JWTManager
 from flask_bcrypt import Bcrypt
+from flask_cors import CORS
 
 mongo = PyMongo()
 bcrypt = Bcrypt()
@@ -19,6 +20,9 @@ from .vote import routes as vote_routes
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
+
+    CORS(app)
+    
     app.config.from_mapping(
         SECRET_KEY=os.environ.get("SECRET_KEY"),
         MONGO_URI=os.environ.get("MONGO_URI"),

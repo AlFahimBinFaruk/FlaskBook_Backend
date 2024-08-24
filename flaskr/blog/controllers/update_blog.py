@@ -22,7 +22,9 @@ def handle_update_blog(blog_id):
             return jsonify({"error": "Blog not found"}), 404
 
         # Check if the user is the owner of the blog or an admin
-        if blog['user_id'] != user_id and user.get("role") != "admin":
+        if str(blog['user_id']) != str(user_id) and user.get("role") != "admin":
+            # print(blog['user_id']," -> ",user_id," -> ",blog['user_id'] != user_id)
+
             return jsonify({"error": "Permission denied"}), 403
 
         # Update the blog with new data from the request

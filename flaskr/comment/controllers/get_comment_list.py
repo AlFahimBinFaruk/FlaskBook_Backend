@@ -2,7 +2,7 @@ from flask import request, jsonify
 from pymongo.errors import PyMongoError
 from ..model import Comment
 from flaskr.blog.model import Blog
-
+from flaskr.user.model import User
 
 def handle_get_comment_list(blog_id):
     try:
@@ -20,6 +20,12 @@ def handle_get_comment_list(blog_id):
             comment['_id'] = str(comment['_id'])
             comment['user_id'] = str(comment['user_id'])
             comment['blog_id'] = str(comment['blog_id'])
+            
+            user = User.find_by_id(comment['user_id'])
+            if user:
+                comment['user_first_name'] = user.get('first_name', 'N/A')
+                comment['user_last_name'] = user.get('last_name', 'N/A')
+
 
             comment_arr.append(comment)
 

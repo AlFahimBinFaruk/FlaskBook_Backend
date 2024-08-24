@@ -26,6 +26,14 @@ class Vote:
             'user_id': ObjectId(user_id),
             'blog_id': ObjectId(blog_id)
         })
+    
+    @staticmethod
+    def update_vote(user_id, blog_id, vote_type):
+        votes_collection = mongo.db.votes
+        return votes_collection.update_one(
+            {'user_id': ObjectId(user_id), 'blog_id': ObjectId(blog_id)},
+            {'$set': {'vote_type': vote_type, 'created_at': datetime.utcnow()}}
+        )
 
     @staticmethod
     def delete_by_user_and_blog(user_id, blog_id):
